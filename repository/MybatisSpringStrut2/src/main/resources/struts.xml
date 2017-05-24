@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <!-- 指定默认编码集 -->
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+
+    <constant name="struts.multipart.maxSize" value="99000000" />
+    <constant name="struts.multipart.saveDir" value="/tmp"/>
+
+    <!-- 当struts配置文件修改时是否自动加载 -->
+    <constant name="struts.configuration.xmlreload" value="true" />
+
+    <!-- 开发模式下打印详细的错误信息 -->
+    <constant name="struts.devMode" value="true" />
+
+    <constant name="struts.ui.theme" value="xhtml" />
+
+    <include file="User.xml"></include>
+    
+</struts>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.IUserDao">
+    
+    <resultMap type="beans.User" id="userResult">
+        <result property="id" column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+        <result property="username" column="username" />
+        <result property="password" column="password" />
+    </resultMap>
+
+    <insert id="insertUser" parameterType="beans.User">
+     insert into f_user_t 
+    (name,pwd,sex,age,email,phone,register_time,last_update_time,remark,active)
+    values
+    (#{name},#{pwd},#{sex},#{age},#{email},#{phone},now(),now(),#{remark},#{active})
+     </insert>
+
+</mapper>
